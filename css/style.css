@@ -1,0 +1,736 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #789AC5;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #e2eaf4;
+    padding: 15px 0;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.4s ease-in-out;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.top-nav input {
+    padding: 8px;
+    width: 220px;
+    border: 2px solid #debe19;
+    border-radius: 20px;
+    outline: none;
+}
+
+.top-nav h1 {
+    font-size: 32px; 
+    font-weight: bold;
+    color: #DEBE19; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px; 
+    text-align: center;
+    flex-grow: 1; 
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background: #debe19;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-nav a:hover {
+    background: #c4a217;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #debe19;
+    padding: 12px 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e2eaf4;
+}
+
+/* Footer */
+
+footer {
+    background-color: #E2EAF4; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+footer a {
+    color: #DEBE19;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #C4A217; 
+    text-decoration: underline;
+}
+
+/* Home Page */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.paintings-preview .grid img, 
+.products-preview .grid img {
+    width: 200%; 
+    max-width: 220px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.paintings-preview .grid img:hover, 
+.products-preview .grid img:hover {
+    transform: scale(1.05);
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #debe19;
+    margin-bottom: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+
+.bio {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #E2EAF4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bio h2 {
+    font-size: 26px;
+    color: #DEBE19;
+    margin-bottom: 15px;
+}
+
+.bio p {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #debe19;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #c4a217;
+}
+
+/* Paintings Page */
+
+.paintings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.paintings-grid a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paintings-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out
+}
+
+.paintings-grid img:hover {
+    transform: scale(1.03);
+}
+
+.paintings-page { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #E2EAF4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paintings-page img {
+    display: block;
+    margin: 0 auto; 
+    width: 100%;
+    max-width: 350px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paintings-page h2 {
+    font-size: 26px;
+    color: #DEBE19;
+    margin-bottom: 15px;
+}
+
+.paintings-page p {
+    font-size: 18px;
+    color: #000;
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #DEBE19;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #C4A217;
+}
+
+/* Life Page */
+
+.life-page {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+.life-page h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #DEBE19;
+    margin-bottom: 30px;
+}
+
+.life-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E2EAF4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.life-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.life-text h3 {
+    font-size: 22px;
+    color: #DEBE19;
+    margin-bottom: 10px;
+}
+
+.life-text p {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.6;
+}
+
+.life-section img {
+    width: 250px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Shop Page */
+
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-button {
+    background-color: #debe19;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.product-button:hover {
+    background-color: #c4a217;
+}
+
+/* Contact Page */
+
+.contact-form {
+    background-color: #e2eaf4;
+    padding: 25px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 22px;
+    color: #debe19;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.bold {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+.form-input:focus {
+    border-color: #debe19;
+    outline: none;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.form-checkbox input {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.button {
+    background-color: #debe19;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #c4a217;
+}
+
+/* Shipping Page */
+
+.shipping {
+    background-color: #e2eaf4;
+    padding: 25px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.shipping h2 {
+    font-size: 24px;
+    color: #debe19;
+    margin-bottom: 20px;
+}
+
+.shipping-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+    margin-top: 15px;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+.form-input:focus {
+    border-color: #debe19;
+    outline: none;
+}
+
+.button {
+    background-color: #debe19;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 20px;
+    width: 1005;
+}
+
+.button:hover {
+    background-color: #c4a217;
+}
+
+/*Thanks Contact Page*/
+
+.thanks-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #E2EAF4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thanks-container h2 {
+    font-size: 24px;
+    color: #DEBE19;
+    margin-bottom: 15px;
+}
+
+.thanks-container p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #DEBE19;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #C4A217;
+}
+
+/* Thanks Order Page */
+
+.thanks-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #E2EAF4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thanks-container h2 {
+    font-size: 24px;
+    color: #DEBE19;
+    margin-bottom: 15px;
+}
+
+.thanks-container p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #DEBE19;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #C4A217;
+}
+
+/* Info Page */
+
+.info-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #E2EAF4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-page h2 {
+    font-size: 28px;
+    color: #DEBE19;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    margin-bottom: 20px;
+}
+
+.info-section h3 {
+    font-size: 22px;
+    color: #DEBE19;
+}
+
+.info-section p {
+    font-size: 16px;
+    color: #000;
+}
+
+.info-section a {
+    color: #DEBE19;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-section a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #DEBE19;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #C4A217;
+}
+
+@media screen and (max-width: 1024px) {
+    .paintings-grid,
+    .shop-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .top-nav input {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .paintings-grid, .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+    .life-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+@media screen and (max-width: 600px) {
+    .top-nav {
+         padding: 5px;
+    }
+    
+     .top-nav h1 {
+        font-size: 24px;
+     }
+    
+    .top-nav a {
+        padding: 8px;
+        font-size: 14px;
+      }
+    
+     nav ul {
+       flex-direction: column;
+     }
+    
+     .paintings-grid, .shop-grid {
+          grid-template-columns: repeat(1, 1fr); 
+      }
+    
+      footer {
+          font-size: 14px;
+          padding: 15px;
+       }
+    
+      input, textarea {
+          font-size: 14px;
+      }
+  }
+
+
+
